@@ -5,6 +5,8 @@ const draggable: Action<HTMLDivElement, { handle: HTMLElement }> = (node, { hand
 	let x = $state(node.offsetLeft)
 	let y = $state(node.offsetTop)
 
+	handle.classList.add('active:cursor-grabbing', 'cursor-grab')
+
 	function handleMouseMove(ev: MouseEvent) {
 		if (dragging) {
 			x += ev.movementX
@@ -26,12 +28,13 @@ const draggable: Action<HTMLDivElement, { handle: HTMLElement }> = (node, { hand
 	window.addEventListener('mousemove', handleMouseMove)
 	window.addEventListener('mouseup', handleMouseUp)
 
-	return {
-		destroy() {
-			handle.removeEventListener('mousedown', handleMouseDown)
-			window.removeEventListener('mousemove', handleMouseMove)
-			window.removeEventListener('mouseup', handleMouseUp)
-		}
+	node.addEventListener('draggableoff', destroy)
+
+	function destroy() {
+		handle.classList.remove('active:cursor-grabbing', 'cursor-grab')
+		handle.removeEventListener('mousedown', handleMouseDown)
+		window.removeEventListener('mousemove', handleMouseMove)
+		window.removeEventListener('mouseup', handleMouseUp)
 	}
 }
 
