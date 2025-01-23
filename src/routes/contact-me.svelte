@@ -13,7 +13,7 @@
 		if (active && closeCount) {
 			handle.dispatchEvent(new CustomEvent('draggableoff', { bubbles: true }))
 			handle.dispatchEvent(
-				new CustomEvent('dvdstart', { detail: { speed: closeCount * 2 }, bubbles: true })
+				new CustomEvent('dvdstart', { detail: { speed: closeCount * 1.5 }, bubbles: true })
 			)
 		}
 	})
@@ -41,9 +41,9 @@
 			>
 				Contact me
 			</h2>
-			<div class="origin-center translate-y-1 scale-[2.0] transform cursor-pointer" {onclick}>
+			<button class="origin-center scale-[2.0] transform cursor-pointer" {onclick}>
 				<X class="relative ml-auto origin-center  scale-50 transform" />
-			</div>
+			</button>
 		</div>
 		<form class="border-nested flex w-full flex-col bg-slate-950 px-2 pt-2 text-slate-100">
 			<div class="flex flex-col gap-y-2 py-2">

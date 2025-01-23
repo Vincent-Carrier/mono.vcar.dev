@@ -3,12 +3,13 @@ import type { Action } from 'svelte/action'
 const dvdMenu: Action<HTMLDivElement> = (node) => {
 	let x = $state(node.offsetLeft)
 	let y = $state(node.offsetTop)
-	let dx = $state(2)
-	let dy = $state(2)
+	let dx = $state(0)
+	let dy = $state(0)
 	let width = $state(node.offsetWidth)
 	let height = $state(node.offsetHeight)
-	let soundFx = new Audio('/bounce.wav')
 	let interval: any = $state()
+	let xSoundFx = new Audio('/bounce.wav')
+	let ySoundFx = new Audio('/bounce.wav')
 
 	function onDvdStart(ev: any) {
 		dx = ev.detail.speed
@@ -19,13 +20,13 @@ const dvdMenu: Action<HTMLDivElement> = (node) => {
 			node.style.left = `${x}px`
 			node.style.top = `${y}px`
 
-			if (x <= 0 || x >= window.innerWidth - width) {
+			if (x <= -4 || x + 4 >= window.innerWidth - width) {
 				dx *= -1
-				soundFx.play()
+				xSoundFx.play()
 			}
-			if (y <= 0 || y >= window.innerHeight - height) {
+			if (y <= -4 || y + 4 >= window.innerHeight - height) {
 				dy *= -1
-				soundFx.play()
+				ySoundFx.play()
 			}
 		}, 16)
 	}
