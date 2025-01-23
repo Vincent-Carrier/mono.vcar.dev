@@ -1,0 +1,189 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+	font-family: 'Berkeley Mono', monospace;
+}
+
+@layer utilities {
+	.shadow-flat {
+		box-shadow: 0.25rem 0.25rem 0 var(--tw-shadow-color);
+	}
+
+	.flex-x-center {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.flex-y-center {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.border-nested {
+		@apply border-8 border-slate-950 outline outline-1 -outline-offset-4 outline-slate-50;
+	}
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-Black-Oblique.woff') format('woff');
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-Bold-Oblique.woff') format('woff');
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-ExtraBold-Oblique.woff') format('woff');
+	font-weight: 800;
+	font-style: italic;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-ExtraBold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-ExtraLight-Oblique.woff') format('woff');
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-ExtraLight.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-Light-Oblique.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-Medium-Oblique.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-Oblique.woff') format('woff');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-SemiBold-Oblique.woff') format('woff');
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-SemiLight-Oblique.woff') format('woff');
+	font-weight: 350;
+	font-style: italic;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-SemiLight.woff') format('woff');
+	font-weight: 350;
+	font-style: normal;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-Thin-Oblique.woff') format('woff');
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: 'Berkeley Mono';
+	src: url('/BerkeleyMono-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+}
