@@ -20,11 +20,11 @@ const dvdMenu: Action<HTMLDivElement> = (node) => {
 			node.style.left = `${x}px`
 			node.style.top = `${y}px`
 
-			if (x <= -4 || x + 4 >= window.innerWidth - width) {
+			if (x <= -2 || x >= window.innerWidth + 2 - width) {
 				dx *= -1
 				xSoundFx.play()
 			}
-			if (y <= -4 || y + 4 >= window.innerHeight - height) {
+			if (y <= -2 || y >= window.innerHeight + 2 - height) {
 				dy *= -1
 				ySoundFx.play()
 			}

@@ -91,10 +91,10 @@
 	}
 
 	input {
-		@apply h-8;
+		@apply h-10;
 	}
 
 	label {
-		@apply ml-1 block text-sm font-bold leading-none;
+		@apply ml-1 block text-lg font-bold leading-none;
 	}
 </style>
