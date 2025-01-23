@@ -1,6 +1,6 @@
 import type { Action } from 'svelte/action'
 
-const draggable: Action<HTMLDivElement> = (node) => {
+const draggable: Action<HTMLDivElement, { handle: HTMLElement }> = (node, { handle }) => {
 	let dragging = $state(false)
 	let x = $state(node.offsetLeft)
 	let y = $state(node.offsetTop)
@@ -22,13 +22,13 @@ const draggable: Action<HTMLDivElement> = (node) => {
 		dragging = false
 	}
 
-	node.addEventListener('mousedown', handleMouseDown)
+	handle.addEventListener('mousedown', handleMouseDown)
 	window.addEventListener('mousemove', handleMouseMove)
 	window.addEventListener('mouseup', handleMouseUp)
 
 	return {
 		destroy() {
-			node.removeEventListener('mousedown', handleMouseDown)
+			handle.removeEventListener('mousedown', handleMouseDown)
 			window.removeEventListener('mousemove', handleMouseMove)
 			window.removeEventListener('mouseup', handleMouseUp)
 		}

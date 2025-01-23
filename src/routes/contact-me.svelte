@@ -1,11 +1,12 @@
 <script lang="ts">
-	import { X } from 'lucide-svelte';
-	import { onMount } from 'svelte';
-	import draggable from '$lib/draggable.svelte';
-	let dx = $state(2);
-	let dy = $state(2);
-	let width = $state(0);
-	let height = $state(0);
+	import { X } from 'lucide-svelte'
+	import { onMount } from 'svelte'
+	import draggable from '$lib/draggable.svelte'
+	let dx = $state(2)
+	let dy = $state(2)
+	let width = $state(0)
+	let height = $state(0)
+	let handle = $state() as HTMLElement
 
 	// onMount(() => {
 	// 	const interval = setInterval(() => {
@@ -23,9 +24,15 @@
 	// });
 </script>
 
-<div class="flex-y-center fixed" bind:clientWidth={width} bind:clientHeight={height} use:draggable>
+<div
+	class="flex-y-center fixed"
+	bind:clientWidth={width}
+	bind:clientHeight={height}
+	use:draggable={{ handle }}
+>
 	<h2
 		class="border-nested z-10 -mb-4 flex w-full cursor-grab select-none bg-slate-50 px-2 text-lg font-bold uppercase tracking-tight text-slate-950 active:cursor-grabbing"
+		bind:this={handle}
 	>
 		Contact me
 		<X class="ml-auto pt-1" />
