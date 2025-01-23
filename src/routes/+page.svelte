@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ContactMe from './contact-me.svelte';
+	import ContactMe from './contact-me.svelte'
 </script>
 
 <div class="border-nested my-32">
@@ -39,4 +39,4 @@
 	</main>
 </div>
 
-<ContactMe />
+<ContactMe class="bottom-12 right-12" />
