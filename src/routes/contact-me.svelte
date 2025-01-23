@@ -4,6 +4,7 @@
 	import dvdMenu from '$lib/dvd-menu.svelte'
 	import { scale } from 'svelte/transition'
 	import { linear } from 'svelte/easing'
+	let win = $state() as HTMLElement
 	let handle = $state() as HTMLElement
 	let active = $state(true)
 	let closeCount = $state(0)
@@ -13,7 +14,10 @@
 		if (active && closeCount) {
 			handle.dispatchEvent(new CustomEvent('draggableoff', { bubbles: true }))
 			handle.dispatchEvent(
-				new CustomEvent('dvdstart', { detail: { speed: closeCount * 1.5 }, bubbles: true })
+				new CustomEvent('dvdstart', {
+					detail: { speed: closeCount * 1.5 },
+					bubbles: true
+				})
 			)
 		}
 	})
@@ -30,6 +34,7 @@
 {#if active}
 	<div
 		class={['flex-y-center fixed w-96', className]}
+		bind:this={win}
 		use:draggable={{ handle }}
 		use:dvdMenu
 		transition:scale={{ duration: 200, easing: linear, opacity: 1.0 }}
