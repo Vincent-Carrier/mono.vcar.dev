@@ -1,8 +1,13 @@
 <script lang="ts">
 	import { X } from 'lucide-svelte';
+	import { onMount } from 'svelte';
 	let dragging = $state(false);
 	let x = $state(0);
 	let y = $state(0);
+	let dx = $state(2);
+	let dy = $state(2);
+	let width = $state(0);
+	let height = $state(0);
 
 	function handleMouseMove(ev: MouseEvent) {
 		if (dragging) {
@@ -10,11 +15,32 @@
 			y += ev.movementY;
 		}
 	}
+
+	// onMount(() => {
+	// 	const interval = setInterval(() => {
+	// 		if (!dragging) {
+	// 			x += dx;
+	// 			y += dy;
+
+	// 			// Bounce off window edges
+	// 			if (x <= 0 || x >= window.innerWidth - width) dx *= -1;
+	// 			if (y <= 0 || y >= window.innerHeight - height) dy *= -1;
+	// 		}
+	// 	}, 16); // ~60fps
+
+	// 	return () => clearInterval(interval);
+	// });
 </script>
 
 <svelte:window onmouseup={() => (dragging = false)} onmousemove={handleMouseMove} />
 
-<div class="flex-y-center fixed bottom-8 right-8" style:transform={`translate(${x}px, ${y}px)`}>
+<div
+	class="flex-y-center fixed"
+	bind:clientWidth={width}
+	bind:clientHeight={height}
+	style:left={`${x}px`}
+	style:top={`${y}px`}
+>
 	<h2
 		class="border-nested z-10 -mb-4 flex w-full cursor-grab select-none bg-slate-50 px-2 text-lg font-bold uppercase tracking-tight text-slate-950 active:cursor-grabbing"
 		onmousedown={() => (dragging = true)}
