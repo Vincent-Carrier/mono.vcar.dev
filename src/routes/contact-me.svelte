@@ -1,20 +1,11 @@
 <script lang="ts">
 	import { X } from 'lucide-svelte';
 	import { onMount } from 'svelte';
-	let dragging = $state(false);
-	let x = $state(0);
-	let y = $state(0);
+	import draggable from '$lib/draggable.svelte';
 	let dx = $state(2);
 	let dy = $state(2);
 	let width = $state(0);
 	let height = $state(0);
-
-	function handleMouseMove(ev: MouseEvent) {
-		if (dragging) {
-			x += ev.movementX;
-			y += ev.movementY;
-		}
-	}
 
 	// onMount(() => {
 	// 	const interval = setInterval(() => {
@@ -32,18 +23,9 @@
 	// });
 </script>
 
-<svelte:window onmouseup={() => (dragging = false)} onmousemove={handleMouseMove} />
-
-<div
-	class="flex-y-center fixed"
-	bind:clientWidth={width}
-	bind:clientHeight={height}
-	style:left={`${x}px`}
-	style:top={`${y}px`}
->
+<div class="flex-y-center fixed" bind:clientWidth={width} bind:clientHeight={height} use:draggable>
 	<h2
 		class="border-nested z-10 -mb-4 flex w-full cursor-grab select-none bg-slate-50 px-2 text-lg font-bold uppercase tracking-tight text-slate-950 active:cursor-grabbing"
-		onmousedown={() => (dragging = true)}
 	>
 		Contact me
 		<X class="ml-auto pt-1" />
