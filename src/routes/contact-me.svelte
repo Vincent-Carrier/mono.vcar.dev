@@ -39,9 +39,9 @@
 		use:dvdMenu
 		transition:scale={{ duration: 200, easing: linear, opacity: 1.0 }}
 	>
-		<div class="border-nested z-10 -mb-4 flex w-80 bg-slate-50">
+		<div class="border-nested z-10 -mb-4 flex w-[22rem] bg-slate-50">
 			<h2
-				class="w-full select-none px-2 text-lg font-bold uppercase tracking-tight text-slate-950"
+				class="w-full px-2 text-lg font-bold tracking-tight text-slate-950 uppercase select-none"
 				bind:this={handle}
 			>
 				Contact me
@@ -50,49 +50,44 @@
 				<X class="relative ml-auto origin-center  scale-50 transform" />
 			</button>
 		</div>
-		<form class="border-nested flex w-full flex-col bg-slate-950 px-2 pt-2 text-slate-100">
-			<div class="flex flex-col gap-y-2 py-2">
-				<label for="name">Name</label>
-				<input
-					type="text"
-					id="name"
-					name="name"
-					autocomplete="name"
-					placeholder="Dennis Richie"
-					required
-				/>
-				<label for="email">Email</label>
-				<input
-					type="email"
-					id="email"
-					name="email"
-					autocomplete="email"
-					placeholder="dennis@bell.labs"
-					required
-				/>
-				<label for="message">Message</label>
-				<textarea
-					id="message"
-					name="message"
-					rows="4"
-					required
-					class="w-full border-2 border-slate-950 bg-base p-2 text-sm outline outline-1 -outline-offset-4 outline-slate-950"
-				></textarea>
-				<button
-					type="submit"
-					class="ml-auto border-slate-100 bg-slate-50 px-12 py-1 text-center text-lg font-light lowercase italic tracking-tighter text-slate-950 outline outline-1 -outline-offset-4 outline-slate-800"
-				>
-					Send -->
-				</button>
-			</div>
+		<form class="border-nested flex-y-1 w-full bg-slate-950 px-3 py-4 text-slate-100">
+			<label for="name">Name</label>
+			<input
+				type="text"
+				id="name"
+				name="name"
+				autocomplete="name"
+				placeholder="Dennis Richie"
+				required
+			/>
+			<label for="email">Email</label>
+			<input
+				type="email"
+				id="email"
+				name="email"
+				autocomplete="email"
+				placeholder="dennis@bell.labs"
+				required
+			/>
+			<label for="message">Message</label>
+			<textarea
+				id="message"
+				name="message"
+				rows="4"
+				required
+				class="bg-base w-full border-2 border-slate-950 p-2 text-sm outline outline-1 -outline-offset-4 outline-slate-950"
+			></textarea>
+			<button type="submit" class="btn self-end"> Send --> </button>
 		</form>
 	</div>
 {/if}
 
 <style lang="postcss">
+	@reference '../app.css';
+
 	input,
 	textarea {
-		@apply mb-1 block w-full border-2 border-slate-950 bg-slate-50 p-2 text-sm text-slate-950 outline outline-1 -outline-offset-4 outline-slate-950;
+		@apply mb-2 block w-full border-2 border-slate-950 bg-slate-50 p-2 text-sm text-slate-950 outline outline-1 -outline-offset-4 outline-slate-950;
 	}
 
 	input {
@@ -100,6 +95,6 @@
 	}
 
 	label {
-		@apply ml-1 block text-lg font-bold leading-none;
+		@apply ml-1 block text-lg leading-none font-bold;
 	}
 </style>

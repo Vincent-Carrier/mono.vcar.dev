@@ -1,30 +1,57 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import 'tailwindcss';
 
 :root {
 	font-family: 'Berkeley Mono', monospace;
 }
 
-@layer utilities {
-	.shadow-flat {
-		box-shadow: 0.25rem 0.25rem 0 var(--tw-shadow-color);
-	}
+@theme {
+	--gap-1: 0.25rem;
+	--gap-2: 0.5rem;
+	--gap-3: 0.75rem;
+	--gap-4: 1rem;
+}
 
-	.flex-x-center {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-	}
+@utility shadow-flat {
+	box-shadow: 0.25rem 0.25rem 0 var(--tw-shadow-color);
+}
 
-	.flex-y-center {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+@utility flex-x {
+	display: flex;
+	flex-direction: row;
+}
+@utility flex-x-center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+@utility flex-x-* {
+	display: flex;
+	flex-direction: row;
+	column-gap: --value(--gap- *);
+}
 
-	.border-nested {
-		@apply border-8 border-slate-950 outline outline-1 -outline-offset-4 outline-slate-50;
+@utility flex-y {
+	display: flex;
+	flex-direction: column;
+}
+@utility flex-y-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+@utility flex-y-* {
+	display: flex;
+	flex-direction: column;
+	column-gap: --value(--gap- *);
+}
+
+@utility border-nested {
+	@apply border-8 border-slate-950 outline -outline-offset-4 outline-slate-50;
+}
+
+@layer components {
+	.btn {
+		@apply border-slate-100 bg-slate-50 px-12 py-1 text-center text-lg font-light tracking-tighter text-slate-950 lowercase italic outline -outline-offset-4 outline-slate-800;
 	}
 }
 
