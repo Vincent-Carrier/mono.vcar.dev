@@ -75,7 +75,7 @@
 				name="message"
 				rows="4"
 				required
-				class="bg-base w-full border-2 border-slate-950 p-2 text-sm outline outline-1 -outline-offset-4 outline-slate-950"
+				class="bg-base w-full border-2 border-slate-950 p-2 text-sm outline-1 -outline-offset-4 outline-slate-950"
 			></textarea>
 			<button type="submit" class="btn self-end"> Send --> </button>
 		</form>
@@ -87,7 +87,7 @@
 
 	input,
 	textarea {
-		@apply mb-2 block w-full border-2 border-slate-950 bg-slate-50 p-2 text-sm text-slate-950 outline outline-1 -outline-offset-4 outline-slate-950;
+		@apply mb-2 block w-full border-2 border-slate-950 bg-slate-50 p-2 text-sm text-slate-950 outline -outline-offset-4 outline-slate-950;
 	}
 
 	input {
