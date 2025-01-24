@@ -1,47 +1,48 @@
 <script lang="ts">
 	import { ExternalLink } from 'lucide-svelte'
 
-	const projects = [
-		{
-			name: 'Oxytone',
-			description: 'Learning dead tongues the new way',
+	const projects = {
+		oxytone: {
+			name: 'oxytone.xyz',
+			description:
+				'Learning dead tongues the new way. A digital reading environment for Ancient Greek, built from scratch.',
 			technologies: 'Python, Web Components',
 			href: 'https://oxytone.xyz/'
 		},
-		{
+		molsoft: {
 			name: 'molsoft.io',
 			description: 'Marketing website for the Molsoft eCommerce agency',
-			technologies: 'React, NextJS, TypeScript, Tailwind',
+			technologies: 'React, NextJS, TypeScript, TailwindCSS',
 			href: 'https://www.molsoft.io/'
 		},
-		{
+		endossed: {
 			name: 'Endossed',
 			description: 'Web app for Endossed, a FinTech startup',
-			technologies: 'React, TypeScript, Tailwind',
+			technologies: 'React, TypeScript, TailwindCSS',
 			href: 'https://web.archive.org/web/20221115131319/https://endossed.com/'
 		},
-		{
+		greekLearnsYou: {
 			name: 'Greek Learns You',
 			description: "Learn Greek words you didn't know you already knew",
-			technologies: 'Svelte, Tailwind',
+			technologies: 'Svelte, TailwindCSS',
 			href: 'https://greek-learns-you.netlify.app/'
 		}
-	]
+	}
 </script>
 
 <div class="flex flex-col max-md:flex-col">
-	{#each projects as { name, description, technologies, href }, i}
-		<div class="flex-x h-40 even:flex-row-reverse">
-			<div
-				class="flex-y w-full bg-slate-50 px-4 py-4 outline-1 -outline-offset-4 outline-slate-800"
-			>
-				<h2 class="text-lg font-bold">
+	{#each Object.entries(projects) as [key, { name, description, technologies, href }]}
+		<div class="flex-x h-60 bg-slate-50 even:flex-row-reverse">
+			<div class="flex-y card-dark w-full justify-center">
+				<h2 class="text-xl font-bold">
 					{name} <a {href} class="-mb-1 inline-block w-8"><ExternalLink /></a>
 				</h2>
-				<p class="grow">{description}</p>
-				<p class="font-light italic">{technologies}</p>
+				<p>{description}</p>
+				<p class="mt-2 font-light italic">{technologies}</p>
 			</div>
-			<img src="" alt="" class="w-96 bg-slate-400" />
+			<a {href} class="w-96 p-2">
+				<img src={`/${key}.png`} alt="" class="h-full object-cover" />
+			</a>
 		</div>
 	{/each}
 </div>

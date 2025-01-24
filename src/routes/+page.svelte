@@ -2,15 +2,14 @@
 	import { slide } from 'svelte/transition'
 	import ContactMe from './contact-me.svelte'
 	import { linear } from 'svelte/easing'
+	import Button from '$lib/components/button.svelte'
 
 	let more = $state(false)
 </script>
 
-<div class="flex max-md:flex-col">
-	<div
-		class="flex-y h-full w-1/2 bg-slate-50 px-4 py-4 outline-1 -outline-offset-4 outline-slate-800 md:h-96"
-	>
-		<h2># README</h2>
+<div class="flex max-sm:flex-col">
+	<div class="flex-y card-light sm:w-1/2">
+		<h1># README</h1>
 		<p>
 			I'm a web developer living in Montréal. I work with startups, agencies and clients to ship
 			websites which are delightful, fast and on-budget.
@@ -20,17 +19,15 @@
 			backend languages like Python and PHP.
 		</p>
 		<p>I'm currently available for new projects. Feel free to reach out below.</p>
-		<button class="btn mt-4 cursor-pointer self-end" onclick={() => (more = true)}
-			>more about me --></button
-		>
+		<Button class="btn mt-4 cursor-pointer self-end" onclick={() => (more = true)}>
+			more about me
+		</Button>
 	</div>
-	<img src="/portrait.png" alt="" class="w-1/2" />
+	<img src="/portrait.png" alt="" class="object-cover object-right-top max-sm:h-96 sm:w-1/2" />
 </div>
 {#if more}
-	<div class="flex flex-row-reverse max-md:flex-col" in:slide={{ easing: linear, duration: 200 }}>
-		<div
-			class="flex-y h-full w-1/2 bg-slate-50 px-8 py-4 outline -outline-offset-4 outline-slate-800 md:h-96"
-		>
+	<div class="flex flex-row-reverse max-sm:flex-col" in:slide={{ easing: linear, duration: 200 }}>
+		<div class="flex-y card-light sm:w-1/2">
 			<h2>## IF YOU INSIST</h2>
 			<p>
 				I've been writing code for over 10 years. I'm a big Linux fan and I spend most of time
@@ -40,17 +37,18 @@
 				Outside of coding, I'm a huge language nerd who's currently learning Ancient Greek. I also
 				love board games, swimming, biking, and the occasional meditation retreat.
 			</p>
-			<button class="btn mt-4 self-end">more !!! --></button>
+			<Button class="btn mt-4 self-end">more !!!</Button>
 		</div>
 		<img src="/landscape.png" alt="" class="w-1/2" />
 	</div>
 {/if}
 
-<ContactMe class="right-12 bottom-12" />
+<ContactMe class="right-12 bottom-12 max-md:hidden" />
 
 <style lang="postcss">
 	@reference '../app.css';
 
+	h1,
 	h2 {
 		@apply mb-2 text-2xl font-bold;
 	}
