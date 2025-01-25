@@ -34,7 +34,7 @@
 					/
 					<span class="mt-1">Carrier</span>
 				</p>
-				<p class="mt-1 text-4xl font-bold">&lt;web-developer/&gt;</p>
+				<p class="mt-1 text-4xl font-medium text-slate-100">&lt;web-developer/&gt;</p>
 				<nav class="flex-x-4 my-4 justify-center">
 					{#each [{ name: 'About', href: '/' }, { name: 'Projects', href: '/projects' }, { name: 'Blog', href: '/blog' }] as { name, href }, i}
 						<Button {href}>
@@ -44,7 +44,7 @@
 				</nav>
 			</header>
 
-			<main>
+			<main class="max-w-screen-md">
 				{@render children()}
 			</main>
 		</div>

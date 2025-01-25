@@ -2,11 +2,14 @@
 
 :root {
 	font-family: 'Berkeley Mono', monospace;
+	font-synthesis: none;
 	--default-transition-duration: 75ms;
 	--default-transition-timing-function: linear;
 }
 
 @theme {
+	--font-mono: 'Berkeley Mono', monospace;
+
 	--gap-1: 0.25rem;
 	--gap-2: 0.5rem;
 	--gap-3: 0.75rem;

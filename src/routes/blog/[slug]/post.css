@@ -1,0 +1,60 @@
+@reference '../../../app.css';
+
+article#post {
+	h1,
+	h2,
+	h3,
+	h4 {
+		@apply font-bold tracking-tight;
+	}
+	h2,
+	h3,
+	h4 {
+		@apply mt-4;
+	}
+	h1 {
+		@apply text-3xl;
+	}
+	h2 {
+		@apply text-2xl;
+	}
+	h3 {
+		@apply text-xl;
+	}
+	h4 {
+		@apply text-lg;
+	}
+
+	hr {
+		@apply my-8;
+	}
+
+	a {
+		@apply italic underline;
+	}
+
+	pre,
+	code {
+		@apply bg-slate-100;
+	}
+
+	:not(pre) > code,
+	pre {
+		@apply outline outline-offset-1 outline-slate-300;
+	}
+
+	pre {
+		@apply p-2 text-base text-slate-700;
+
+		& .hljs-built_in,
+		& .hljs-keyword {
+			@apply text-slate-900;
+		}
+		& .hljs-title {
+			@apply font-medium text-slate-800;
+		}
+		& .hljs-comment {
+			@apply font-extralight text-slate-500 italic;
+		}
+	}
+}
