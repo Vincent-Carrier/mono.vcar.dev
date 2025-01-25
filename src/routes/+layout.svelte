@@ -10,7 +10,7 @@
 
 <button
 	onclick={() => (play = !play)}
-	class="surface-dark fixed top-4 right-4 cursor-pointer bg-slate-950 p-1 text-slate-50 *:fill-slate-50 max-md:hidden"
+	class="surface-dark fixed top-4 right-4 cursor-pointer border-slate-800 bg-slate-800 p-1 text-slate-50 transition-colors *:fill-slate-50 hover:border-slate-950 hover:bg-slate-950 max-md:hidden"
 >
 	{#if play}
 		<Pause />

@@ -25,6 +25,9 @@
 	},
 	"dependencies": {
 		"@inlang/paraglide-sveltekit": "^0.15.5",
-		"lucide-svelte": "^0.473.0"
+		"globby": "^14.0.2",
+		"gray-matter": "^4.0.3",
+		"lucide-svelte": "^0.473.0",
+		"marked": "^15.0.6"
 	}
 }

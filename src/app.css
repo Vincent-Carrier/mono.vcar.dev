@@ -2,6 +2,8 @@
 
 :root {
 	font-family: 'Berkeley Mono', monospace;
+	--default-transition-duration: 75ms;
+	--default-transition-timing-function: linear;
 }
 
 @theme {
@@ -38,7 +40,7 @@
 @utility flex-y-* {
 	display: flex;
 	flex-direction: column;
-	column-gap: --value(--gap- *);
+	row-gap: --value(--gap- *);
 }
 
 @utility surface-dark {
@@ -48,6 +50,7 @@
 @utility card-light {
 	@apply bg-slate-50 p-4 text-slate-950 outline-1 -outline-offset-4 outline-slate-950;
 }
+
 @utility card-dark {
 	@apply bg-slate-950 p-4 outline-1 -outline-offset-4 outline-slate-50;
 }
