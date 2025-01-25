@@ -5,7 +5,10 @@ import { globby } from 'globby'
 
 export type Post = {
 	title: string
+	subtitle?: string
 	slug: string
+	description: string
+	date: string
 }
 
 export const load: PageServerLoad = async () => {

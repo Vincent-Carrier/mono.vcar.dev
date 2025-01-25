@@ -8,7 +8,7 @@
 </script>
 
 <div class="flex max-sm:flex-col">
-	<div class="flex-y card-light sm:w-1/2">
+	<div class="flex-y surface-light sm:w-1/2">
 		<h1># README</h1>
 		<p>
 			I'm a web developer living in Montréal. I work with startups, agencies and clients to ship
@@ -27,7 +27,7 @@
 </div>
 {#if more}
 	<div class="flex flex-row-reverse max-sm:flex-col" in:slide={{ easing: linear, duration: 200 }}>
-		<div class="flex-y card-light sm:w-1/2">
+		<div class="flex-y surface-light sm:w-1/2">
 			<h2>## IF YOU INSIST</h2>
 			<p>
 				I've been writing code for over 10 years. I'm a big Linux fan and I spend most of time

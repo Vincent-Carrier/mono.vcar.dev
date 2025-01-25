@@ -1,6 +1,10 @@
 @reference '../../../app.css';
 
 article#post {
+	@variant max-sm {
+		font-size: 90%;
+	}
+
 	h1,
 	h2,
 	h3,
@@ -35,7 +39,7 @@ article#post {
 
 	pre,
 	code {
-		@apply bg-slate-100;
+		@apply bg-slate-100 text-slate-700;
 	}
 
 	:not(pre) > code,
@@ -44,7 +48,7 @@ article#post {
 	}
 
 	pre {
-		@apply p-2 text-base text-slate-700;
+		@apply m-2 p-2 text-base text-slate-700;
 
 		& .hljs-built_in,
 		& .hljs-keyword {

@@ -17,8 +17,7 @@
 		},
 		oxytone: {
 			name: 'oxytone.xyz',
-			description:
-				'Learning dead tongues the new way. A digital reading environment for Ancient Greek, built from scratch.',
+			description: 'A digital reading environment for Ancient Greek, built from scratch.',
 			technologies: 'Python, Web Components, SASS',
 			href: 'https://oxytone.xyz/'
 		},
@@ -37,28 +36,18 @@
 	}
 </script>
 
-<div class="flex-y-1 bg-slate-50 p-1">
+<div class="flex-y-1 md:gap-y-2">
 	{#each Object.entries(projects) as [key, { name, description, technologies, href }]}
-		<div class="flex-x h-60 bg-slate-50 even:flex-row-reverse">
-			<div class="flex-y card-light w-full p-8">
-				<h2 class="mb-4 text-2xl font-bold">
-					<a {href} target="_blank">
-						{name}
-					</a>
-					<a {href} target="_blank" class="-mb-1 inline-block w-8">
-						<ExternalLink strokeWidth={1} />
-					</a>
+		<a {href} target="_blank" class="flex-x-1 h-60 bg-slate-50 p-1 even:flex-row-reverse">
+			<div class="flex-y card-light md:p-8">
+				<h2 class="text-lg font-bold sm:mb-4 sm:text-2xl">
+					{name}
+					<ExternalLink class="inline-block w-4 stroke-1 md:-mb-1 md:w-8" />
 				</h2>
-				<p class="max-w-sm grow text-lg">{description}</p>
-				<p class="mt-2 font-light italic">{technologies}</p>
+				<p class="grow md:pr-12 md:text-lg">{@html description}</p>
+				<p class="text-detail mt-2 self-end">{technologies}</p>
 			</div>
-			<a {href} target="_blank" class="w-96 p-2">
-				<img src={`/${key}.png`} alt="" class="h-full object-cover" />
-			</a>
-		</div>
+			<img src={`/${key}.png`} alt="" class="h-full border border-slate-950 object-cover" />
+		</a>
 	{/each}
 </div>
-
-<style lang="postcss">
-	@reference '../../app.css';
-</style>

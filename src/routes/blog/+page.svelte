@@ -4,20 +4,20 @@
 	const { data }: PageProps = $props()
 </script>
 
-<div class="flex-y-1 p-1 md:w-[48rem]">
-	{#each data.posts as p}
-		<div class="flex-x h-60 bg-slate-50">
-			<div class="flex-y card-light w-full p-8">
-				<a href={`/blog/${p.slug}`}>
-					<h2 class="mb-4 text-2xl font-bold">
-						{p.title}
-					</h2>
-				</a>
-				<!-- <p class="max-w-sm grow text-lg">{description}</p> -->
+<div class="flex-y-1 md:gap-y-2">
+	{#each data.posts as { title, subtitle, description, slug, date }}
+		<a href={`/blog/${slug}`} class="flex-x-1 h-32 bg-slate-50 p-1 even:flex-row-reverse md:h-48">
+			<div class="flex-y card-light w-full">
+				<h2 class="mb-1 text-lg leading-tight font-bold md:text-2xl">
+					{title}
+				</h2>
+				{#if subtitle}
+					<p class="text-detail mb-2">{subtitle}</p>
+				{/if}
+				<p class="max-w-lg grow text-base tracking-tight max-md:hidden">{description}</p>
+				<p class="text-detail mt-auto self-end text-sm">{date}</p>
 			</div>
-			<!-- <a {href} target="_blank" class="w-96 p-2">
-				<img src={`/${key}.png`} alt="" class="h-full object-cover" />
-			</a> -->
-		</div>
+			<img src={`/${slug}.png`} alt="" class="h-full border border-slate-950 object-cover" />
+		</a>
 	{/each}
 </div>

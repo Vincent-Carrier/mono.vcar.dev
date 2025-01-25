@@ -2,7 +2,7 @@
 title: 'JavaScript Iterators Made Easy'
 slug: 'js-iterators'
 description: 'JavaScript iterators are one of my favourite features of the language, yet nobody seems to know about them.'
-pubDate: '2023-03-22'
+date: '2023/03/22'
 ---
 
 # JavaScript Iterators Made Easy

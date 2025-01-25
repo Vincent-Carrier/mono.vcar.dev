@@ -26,8 +26,8 @@
 		{ play }
 	]}
 >
-	<div class="flex-y-center mx-auto max-w-screen-md text-slate-950 md:py-12">
-		<div class="surface-dark md:mb-32">
+	<div class="md:py-12">
+		<div class="surface-dark flex-y-center mx-auto max-w-3xl text-slate-950 max-md:min-h-screen">
 			<header class="flex-y-center bg-slate-950 p-4 text-slate-50">
 				<p class="flex-x-1 text-5xl font-black tracking-tighter uppercase sm:text-6xl">
 					<span class="-mt-[6px]">Vincent</span>
@@ -44,7 +44,7 @@
 				</nav>
 			</header>
 
-			<main class="max-w-screen-md">
+			<main class="w-full md:p-1">
 				{@render children()}
 			</main>
 		</div>
