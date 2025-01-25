@@ -46,7 +46,7 @@
 			Contact me
 		</h2>
 		<button class="origin-center scale-[2.0] transform cursor-pointer" {onclick}>
-			<X class="relative ml-auto origin-center  scale-50 transform" />
+			<X class="relative ml-auto origin-center scale-50  transform text-slate-950" />
 		</button>
 	</div>
 	<form class="surface-dark flex-y-1 w-full bg-slate-950 px-3 py-4 text-slate-100">
