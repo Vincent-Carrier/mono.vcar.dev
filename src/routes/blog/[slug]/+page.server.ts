@@ -4,6 +4,7 @@ import type { PageServerLoad } from './$types'
 import MarkdownIt from 'markdown-it'
 import highlightjs from 'markdown-it-highlightjs'
 import type { Post } from '../+page.server'
+// import type { EntryGenerator } from './$types'
 
 const md = MarkdownIt({ html: true })
 md.use(highlightjs)
@@ -14,3 +15,12 @@ export const load: PageServerLoad = async ({ params: { slug } }) => {
 	const html = md.render(content)
 	return { post: html, ...(data as Post) }
 }
+
+// export const entries: EntryGenerator = () => {
+// 	return [
+// 		{ slug: 'js-iterators' },
+// 		{ slug: 'against-choice' },
+// 	]
+// }
+
+// export const prerender = true
