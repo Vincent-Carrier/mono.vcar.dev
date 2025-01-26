@@ -3,6 +3,8 @@
 	import { Pause, Play } from 'lucide-svelte'
 	import '../app.css'
 	import Button from '$lib/components/button.svelte'
+
+	export const prerender = true
 	let { children } = $props()
 
 	let play = $state(!dev)
