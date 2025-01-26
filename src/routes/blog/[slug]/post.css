@@ -10,23 +10,38 @@ article#post {
 	h3,
 	h4 {
 		@apply font-bold tracking-tight;
+		&::before {
+			@apply font-extralight;
+		}
 	}
 	h2,
 	h3,
 	h4 {
-		@apply mt-4;
+		@apply mt-6 leading-3;
 	}
 	h1 {
 		@apply text-3xl;
+		&::before {
+			content: '# ';
+		}
 	}
 	h2 {
 		@apply text-2xl;
+		&::before {
+			content: '#​# ';
+		}
 	}
 	h3 {
 		@apply text-xl;
+		&::before {
+			content: '#​#​# ';
+		}
 	}
 	h4 {
 		@apply text-lg;
+		&::before {
+			content: '#​#​#​# ';
+		}
 	}
 
 	hr {
@@ -48,7 +63,7 @@ article#post {
 	}
 
 	pre {
-		@apply m-2 p-2 text-base text-slate-700;
+		@apply m-2 overflow-y-scroll p-2 text-base text-slate-700;
 
 		& .hljs-built_in,
 		& .hljs-keyword {
