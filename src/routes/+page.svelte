@@ -45,8 +45,7 @@
 <div class="md:hidden mt-2">
 	<h2 class="card-dark py-0 w-full px-2 text-lg font-bold tracking-tight uppercase">Contact me</h2>
 	<form
-		data-netlify="true"
-		method="POST"
+		netlify
 		name="contact"
 		class="card-dark flex-y-1 w-full bg-slate-950 px-3 py-4 text-slate-100"
 	>
