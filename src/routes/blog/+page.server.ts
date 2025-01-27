@@ -12,7 +12,7 @@ export type Post = {
 }
 
 export const load: PageServerLoad = async () => {
-	const paths = await globby(import.meta.dirname + '/[slug]/*.md')
+	const paths = await globby('blog/*.md')
 	const posts = []
 	for (const p of paths) {
 		const stream = fs.createReadStream(p, { encoding: 'utf8' })
@@ -26,3 +26,5 @@ export const load: PageServerLoad = async () => {
 	}
 	return { posts }
 }
+
+export const prerender = true
