@@ -49,7 +49,7 @@
 			<X class="relative ml-auto origin-center scale-50  transform text-slate-950" />
 		</button>
 	</div>
-	<form class="surface-dark flex-y-1 w-full bg-slate-950 px-3 py-4 text-slate-100">
+	<form data-netlify="true" method="POST" name="contact" class="surface-dark flex-y-1 w-full bg-slate-950 px-3 py-4 text-slate-100">
 		<label for="name">Name</label>
 		<input
 			type="text"

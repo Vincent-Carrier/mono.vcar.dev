@@ -42,6 +42,37 @@
 		<img src="/landscape.png" alt="" class="w-1/2" />
 	</div>
 {/if}
+<div class="md:hidden mt-2">
+	<h2 class="card-dark py-0 w-full px-2 text-lg font-bold tracking-tight uppercase">Contact me</h2>
+	<form
+		data-netlify="true"
+		method="POST"
+		name="contact"
+		class="card-dark flex-y-1 w-full bg-slate-950 px-3 py-4 text-slate-100"
+	>
+		<label for="name">Name</label>
+		<input
+			type="text"
+			id="name"
+			name="name"
+			autocomplete="name"
+			placeholder="Dennis Richie"
+			required
+		/>
+		<label for="email">Email</label>
+		<input
+			type="email"
+			id="email"
+			name="email"
+			autocomplete="email"
+			placeholder="dennis@bell.labs"
+			required
+		/>
+		<label for="message">Message</label>
+		<textarea id="message" name="message" rows="4" required></textarea>
+		<Button type="submit" class="self-end">Send</Button>
+	</form>
+</div>
 
 <ContactMe class="right-12 bottom-12 max-md:hidden" />
 
