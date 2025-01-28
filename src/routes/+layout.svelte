@@ -28,16 +28,16 @@
 >
 	<div class="md:py-12">
 		<div class="surface-dark flex-y-center mx-auto max-w-3xl text-slate-950 max-md:min-h-svh">
-			<header class="flex-y-center bg-slate-950 p-4 text-slate-50 max-sm:text-(length:75%)">
-				<p class="flex-x-1 text-5xl font-black tracking-tighter uppercase sm:text-6xl">
+			<header class="flex-y-center bg-slate-950 p-4 text-slate-50">
+				<p class="flex-x-1 text-4xl font-black tracking-tighter uppercase sm:text-6xl">
 					<span class="-mt-[6px]">Vincent</span>
 					/
 					<span class="mt-1">Carrier</span>
 				</p>
-				<p class="mt-1 text-4xl font-medium text-slate-100">&lt;web-developer/&gt;</p>
-				<nav class="flex-x-4 my-4 justify-center">
+				<p class="mt-1 text-2xl font-medium text-slate-100 sm:text-4xl">&lt;web-developer/&gt;</p>
+				<nav class="flex-x-1 my-4 justify-center md:gap-x-4">
 					{#each [{ name: 'About', href: '/' }, { name: 'Projects', href: '/projects' }, { name: 'Blog', href: '/blog' }] as { name, href }, i}
-						<Button {href}>
+						<Button class="max-sm:text-sm" {href}>
 							{i}/ {name}
 						</Button>
 					{/each}
