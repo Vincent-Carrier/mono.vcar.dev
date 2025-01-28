@@ -36,6 +36,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Projects — Vincent Carrier</title>
+</svelte:head>
+
 <div class="flex-y-1 md:gap-y-2">
 	{#each Object.entries(projects) as [key, { name, description, technologies, href }]}
 		<a {href} target="_blank" class="flex-x-1 h-60 bg-slate-50 p-1 even:flex-row-reverse">

@@ -8,6 +8,10 @@
 	let more = $state(false)
 </script>
 
+<svelte:head>
+	<title>About — Vincent Carrier</title>
+</svelte:head>
+
 <div class="flex max-sm:flex-col">
 	<div class="flex-y surface-light sm:w-1/2">
 		<h1 class="text-xl"># README</h1>

@@ -4,6 +4,10 @@
 	const { data }: PageProps = $props()
 </script>
 
+<svelte:head>
+	<title>Blog — Vincent Carrier</title>
+</svelte:head>
+
 <div class="flex-y-1 md:gap-y-2">
 	{#each data.posts as { title, subtitle, description, slug, date }}
 		<a href={`/blog/${slug}`} class="flex-x-1 h-32 bg-slate-50 p-1 even:flex-row-reverse md:h-48">
