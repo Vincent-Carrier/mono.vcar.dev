@@ -66,5 +66,5 @@ Companies profit when we can't control our attention. We need systems to protect
 ## Further Reading
 
 - [Cron](https://wiki.archlinux.org/title/Cron) on the Arch Wiki
-- `man 5 crontab`
 - [Sudo](https://wiki.archlinux.org/title/Sudo#Using_visudo) on the Arch Wiki
+- `man 5 crontab`

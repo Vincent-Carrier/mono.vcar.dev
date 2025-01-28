@@ -10,35 +10,45 @@ article#post {
 	h3,
 	h4 {
 		@apply font-bold tracking-tight;
+
 		&::before {
 			@apply font-extralight;
 		}
 	}
+
 	h2,
 	h3,
 	h4 {
 		@apply mt-6 leading-3;
 	}
+
 	h1 {
 		@apply text-3xl;
+
 		&::before {
 			content: '# ';
 		}
 	}
+
 	h2 {
 		@apply text-2xl;
+
 		&::before {
 			content: '#​# ';
 		}
 	}
+
 	h3 {
 		@apply text-xl;
+
 		&::before {
 			content: '#​#​# ';
 		}
 	}
+
 	h4 {
 		@apply text-lg;
+
 		&::before {
 			content: '#​#​#​# ';
 		}
@@ -57,7 +67,7 @@ article#post {
 		@apply bg-slate-100 text-slate-700;
 	}
 
-	:not(pre) > code,
+	:not(pre)>code,
 	pre {
 		@apply outline outline-offset-1 outline-slate-300;
 	}
@@ -69,11 +79,17 @@ article#post {
 		& .hljs-keyword {
 			@apply text-slate-900;
 		}
+
 		& .hljs-title {
 			@apply font-medium text-slate-800;
 		}
+
 		& .hljs-comment {
 			@apply font-extralight text-slate-500 italic;
 		}
+	}
+
+	li {
+		@apply list-disc ml-4
 	}
 }
