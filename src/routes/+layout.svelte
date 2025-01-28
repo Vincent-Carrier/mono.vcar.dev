@@ -27,8 +27,8 @@
 	]}
 >
 	<div class="md:py-12">
-		<div class="surface-dark flex-y-center mx-auto max-w-3xl text-slate-950 max-md:min-h-screen">
-			<header class="flex-y-center bg-slate-950 p-4 text-slate-50 max-sm:text-[75%]">
+		<div class="surface-dark flex-y-center mx-auto max-w-3xl text-slate-950 max-md:min-h-svh">
+			<header class="flex-y-center bg-slate-950 p-4 text-slate-50 max-sm:text-(length:75%)">
 				<p class="flex-x-1 text-5xl font-black tracking-tighter uppercase sm:text-6xl">
 					<span class="-mt-[6px]">Vincent</span>
 					/
