@@ -4,6 +4,7 @@
 
 <form
 	data-netlify="true"
+	data-netlify-recaptcha="true"
 	method="POST"
 	name="contact"
 	class="card-dark flex-y-1 w-full bg-slate-950 px-3 py-4 text-slate-100"
@@ -29,5 +30,6 @@
 	/>
 	<label for="message">Message</label>
 	<textarea id="message" name="message" rows="4" required></textarea>
+	<div data-netlify-recaptcha="true"></div>
 	<Button type="submit" class="self-end">Send</Button>
 </form>

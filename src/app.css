@@ -11,10 +11,21 @@
 @theme {
 	--font-mono: 'Berkeley Mono', monospace;
 
-	--gap-1: 0.25rem;
-	--gap-2: 0.5rem;
-	--gap-3: 0.75rem;
-	--gap-4: 1rem;
+	--size-1: 0.25rem;
+	--size-2: 0.5rem;
+	--size-3: 0.75rem;
+	--size-4: 1rem;
+	--size-5: 1.25rem;
+	--size-6: 1.5rem;
+	--size-8: 2rem;
+	--size-10: 2.5rem;
+	--size-12: 3rem;
+	--size-16: 4rem;
+}
+
+@utility sq-* {
+	width: --value(--size-*);
+	height: --value(--size-*);
 }
 
 @utility flex-x {
@@ -31,7 +42,7 @@
 @utility flex-x-* {
 	display: flex;
 	flex-direction: row;
-	column-gap: --value(--gap- *);
+	column-gap: --value(--size-*);
 }
 
 @utility flex-y {
@@ -48,7 +59,7 @@
 @utility flex-y-* {
 	display: flex;
 	flex-direction: column;
-	row-gap: --value(--gap- *);
+	row-gap: --value(--size-*);
 }
 
 @utility morphing-diamonds {
